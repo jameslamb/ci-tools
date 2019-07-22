@@ -1,0 +1,43 @@
+# Python caches and build artifacts
+**/__pycache__/
+**/*.egg-info/
+**/build/
+**/dist/
+
+# Python files
+**/*.ipynb_checkpoints/
+**/*.ipynb
+
+# R files
+**/*.Rhistory
+**/*.rda
+**/*.rds
+**/*.Rdata
+
+# testing stuff
+**/test_data/*.json
+**/.coverage
+**/htmlcov/
+**/man/
+**/.pytest_cache/
+
+# misc files
+**/*.DS_Store
+**/*.log
+run.sh
+
+# documentation
+**/_build/
+**/warnings.txt
+
+# aspell check stuff
+**/*.bak
+
+# data files
+**/*.xls
+**/*.xlsx
+**/*.tar.gz
+**/*.rar
+**/*.7z
+**/*.bz2
+**/*.zip
