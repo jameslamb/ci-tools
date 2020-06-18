@@ -36,7 +36,7 @@ class LicenseViolation:
 # There is a lot of customization in these licenses.
 # Using this to catch all the ones you've seen
 # and approved for use
-LICENSE_WHITELIST = [
+LICENSE_ALLOW_LIST = [
     "3-clause BSD",
     "Apache 2.0",
     "BSD",
@@ -55,10 +55,10 @@ LICENSE_WHITELIST = [
 # packages will have license "UNKOWN". Here we
 # record the results of manual review and links
 # to those manually-reviewed licenses
-PACKAGE_WHITELIST = [
+PACKAGE_ALLOW_LIST = [
 
     # MPL (Mozilla Public License)
-    # We want to selectively whitelist individual MPL projects
+    # We want to selectively ALLOW_LIST individual MPL projects
     # based on the way they are used.
     "certifi",
 
@@ -66,7 +66,7 @@ PACKAGE_WHITELIST = [
     # LGPL is like GPL but "softer" because it doesn't
     # require you to open-source derivative works
     # https://opensource.org/licenses/LGPL-3.0
-    # However, we want to still selectively whitelist LGPL
+    # However, we want to still selectively ALLOW_LIST LGPL
     # dependencies based on our use of them.
     "chardet",
 
@@ -98,8 +98,8 @@ for dep in deps:
     pkg_name = dep["Name"]
     license = dep["License"]
 
-    approved_package = pkg_name in PACKAGE_WHITELIST
-    approved_license = license in LICENSE_WHITELIST
+    approved_package = pkg_name in PACKAGE_ALLOW_LIST
+    approved_license = license in LICENSE_ALLOW_LIST
 
     if approved_package or approved_license:
         stdout.write("{}: OK\n".format(pkg_name))

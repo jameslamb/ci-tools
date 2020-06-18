@@ -8,7 +8,7 @@
 #     problematic licenses anywhere in the dependency tree.
 #
 #     To configure which licenses are considered "problematic"
-#     and which libraries you want to whitelist, change
+#     and which libraries you want to explicitly allow, change
 #     check_dependency_licenses.py
 #
 # [usage]
